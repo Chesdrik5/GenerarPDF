@@ -1,0 +1,193 @@
+/**
+ * adding sorting ability to HTML tables with Bootstrap styling
+ * @summary HTML tables sorting ability
+ * @version 2.0.0
+ * @requires tinysort, moment.js, jQuery
+ * @license MIT
+ * @author Matus Brlit (drvic10k)
+ * @copyright Matus Brlit (drvic10k), bootstrap-sortable contributors
+ */
+
+table.sortable span.sign
+{
+    font-size: 12px;
+
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    display: block;
+
+    margin-top: -10px;
+
+    color: #fff;
+}
+
+table.sortable th:after
+{
+    font-size: 12px;
+
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    display: block;
+
+    margin-top: -10px;
+
+    color: #fff;
+}
+
+table.sortable th.arrow:after
+{
+    content: '';
+}
+
+table.sortable th
+{
+    font-weight: 300;
+
+    padding: 10px !important;
+
+    color: #fff;
+    background-color: #404040;
+}
+
+table.sortable span.arrow,
+span.reversed,
+th.arrow.down:after,
+th.reversedarrow.down:after,
+th.arrow.up:after,
+th.reversedarrow.up:after
+{
+    font-size: 0;
+    line-height: 0;
+
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+table.sortable span.arrow.up,
+th.arrow.up:after
+{
+    margin-top: -7px;
+
+    border-color: transparent transparent #fff transparent;
+}
+
+table.sortable span.reversed,
+th.reversedarrow.down:after
+{
+    margin-top: -7px;
+
+    border-color: transparent transparent #fff transparent;
+}
+
+table.sortable span.reversed.up,
+th.reversedarrow.up:after
+{
+    margin-top: -2px;
+
+    border-color: #fff transparent transparent transparent;
+}
+
+table.sortable span.az:before,
+th.az.down:after
+{
+    content: 'a .. z';
+}
+
+table.sortable span.az.up:before,
+th.az.up:after
+{
+    content: 'z .. a';
+}
+
+table.sortable th.az.nosort:after,
+th.AZ.nosort:after,
+th._19.nosort:after,
+th.month.nosort:after
+{
+    content: '..';
+}
+
+table.sortable span.AZ:before,
+th.AZ.down:after
+{
+    content: 'A .. Z';
+}
+
+table.sortable span.AZ.up:before,
+th.AZ.up:after
+{
+    content: 'Z .. A';
+}
+
+table.sortable span._19:before,
+th._19.down:after
+{
+    content: '1 .. 9';
+}
+
+table.sortable span._19.up:before,
+th._19.up:after
+{
+    content: '9 .. 1';
+}
+
+table.sortable span.month:before,
+th.month.down:after
+{
+    content: 'ene .. dic';
+}
+
+table.sortable span.month.up:before,
+th.month.up:after
+{
+    content: 'dic .. ene';
+}
+
+table.sortable > thead th:not([data-defaultsort=disabled])
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+}
+
+table.sortable > thead th:hover:not([data-defaultsort=disabled])
+{
+    background: #1c3d6c;
+}
+
+table.sortable > thead th div.mozilla
+{
+    position: relative;
+}
+
+
+/*******/
+
+.results tr[visible='false'],
+.no-result
+{
+    display: none;
+}
+
+.results tr[visible='true']
+{
+    display: table-row;
+}
+
+.counter
+{
+    padding: 8px;
+
+    color: #ccc;
+}

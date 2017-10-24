@@ -1,0 +1,646 @@
+*
+{
+    position: relative;
+}
+
+.cf:before,
+.cf:after
+{
+    display: table;
+    /* 2 */
+
+    content: ' ';
+    /* 1 */
+}
+
+.cf:after
+{
+    clear: both;
+}
+
+
+/**
+ * For IE 6/7 only
+ * Include this rul.organigramae to trigger hasLayout and contain floats.
+ */
+
+.cf
+{
+    *zoom: 1;
+}
+
+
+/* Generic styling */
+
+.content
+{
+    width: 100%;
+    max-width: 1142px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+a:focus
+{
+    outline: 2px solid #f7f7f7;
+}
+
+@media all and (max-width: 767px)
+{
+    .content
+    {
+        padding: 20px 20px;
+    }
+}
+
+ul.organigrama
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+ul.organigrama a
+{
+    font-size: 11px;
+    font-weight: bold;
+
+    display: block;
+    overflow: hidden;
+
+    height: 80px;
+    /*altura de  director y anexos*/
+    margin-bottom: -26px;
+
+    -webkit-transition: all linear .1s;
+       -moz-transition: all linear .1s;
+            transition: all linear .1s;
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    border: none;
+    background: #000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}
+
+ul.organigrama a span
+{
+    top: 15px;
+
+    display: block;
+
+    margin-top: -.7em;
+}
+
+.administration > li > a
+{
+    margin-bottom: 25px;
+}
+
+.director > li > a
+{
+    width: 50%;
+    margin: 0 auto 0 auto;
+}
+
+.subdirector:after
+{
+    position: absolute;
+    left: 49.2%;
+
+    display: block;
+
+    width: 0;
+    height: 134px;
+
+    content: '';
+
+    border-left: 4px solid #000;
+    background: red;
+}
+
+.subdirector,
+.departments
+{
+    /*position: absolute;*/
+    width: 100%;
+}
+
+.subdirector > li:first-child,
+.departments > li:first-child
+{
+    z-index: 0;
+
+    width: 18.59894921190893%;
+    height: 64px;
+    margin: 0 auto 92px auto;
+    padding-top: 25px;
+
+    border-bottom: 4px solid #000;
+}
+
+.subdirector > li:first-child
+{
+    right: 27.2%;
+
+    float: right;
+
+    border-left: 4px solid #000;
+}
+
+.departments > li:first-child
+{
+    left: 31%;
+
+    float: left;
+
+    border-right: 4px solid #000;
+}
+
+.subdirector > li:first-child a,
+.departments > li:first-child a
+{
+    width: 100%;
+}
+
+.subdirector > li:first-child a
+{
+    left: 25px;
+}
+
+@media all and (max-width: 767px)
+{
+    ul.organigrama a
+    {
+        font-size: 11px;
+    }
+    .director > li > a
+    {
+        width: 90%;
+        margin: 0 auto 0 auto;
+    }
+    ul.organigrama a span
+    {
+        top: 30% important;
+    }
+}
+
+@media all and (max-width: 767px)
+{
+    .subdirector > li:first-child,
+    .departments > li:first-child
+    {
+        width: 40%;
+    }
+    .subdirector > li:first-child
+    {
+        right: 10%;
+
+        margin-right: 2px;
+    }
+    .subdirector:after
+    {
+        left: 49.8%;
+    }
+    .departments > li:first-child
+    {
+        left: 10%;
+
+        margin-left: 2px;
+    }
+}
+
+.departments > li:first-child a
+{
+    right: 25px;
+}
+
+.department:first-child,
+.department-level:first-child,
+.department-level2:first-child,
+.departments li:nth-child(2)
+{
+    clear: left;
+
+    margin-left: 0;
+}
+
+.departments:after
+{
+    position: absolute;
+    top: 130px;
+    left: 7.429%;
+
+    display: block;
+
+    width: 85%;
+    /*width: 100%;*/
+    height: 66px;
+    margin: 0 auto;
+
+    content: '';
+
+    border-top: 4px solid #000;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
+}
+
+@media all and (max-width: 767px)
+{
+    .departments:after
+    {
+        left: 0;
+
+        width: 49.8%;
+
+        border-right: none;
+    }
+}
+
+@media all and (min-width: 768px)
+{
+    .department:first-child:before,
+    .department:last-child:before,
+    .department-level:first-child:before,
+    .department-level:last-child:before,
+    .department-level2:first-child:before,
+    .department-level2:last-child:before
+    {
+        border: none;
+    }
+}
+
+.department:before
+{
+    position: absolute;
+    z-index: 0;
+    top: -22px;
+    left: 50%;
+
+    display: block;
+
+    width: 0;
+    height: 22px;
+    margin-left: -4px;
+
+    content: '';
+
+    border-left: 4px solid #000;
+}
+
+.department-level:before
+{
+    position: absolute;
+    z-index: 0;
+    top: -42px;
+    left: 50%;
+
+    display: block;
+
+    width: 0;
+    height: 62px;
+    margin-left: -4px;
+
+    content: '';
+
+    border-left: 4px solid #000;
+}
+
+.department-level2:before
+{
+    position: absolute;
+    z-index: 0;
+    top: -62px;
+    left: 50%;
+
+    display: block;
+
+    width: 0;
+    height: 82px;
+    margin-left: -4px;
+
+    content: '';
+
+    border-left: 4px solid #000;
+}
+
+.department
+{
+    float: left;
+
+    width: 15.1%;
+    margin-bottom: 60px;
+    margin-left: 1.751313485113835%;
+
+    border-left: 4px solid #000;
+}
+
+.department-level
+{
+    top: 20px;
+
+    float: left;
+
+    width: 15.1%;
+    margin-bottom: 60px;
+    margin-left: 1.751313485113835%;
+
+    border-left: 4px solid #000;
+}
+
+.department-level2
+{
+    top: 40px;
+
+    float: left;
+
+    width: 15.1%;
+    margin-bottom: 60px;
+    margin-left: 1.751313485113835%;
+
+    border-left: 4px solid #000;
+}
+
+.lt-ie8 .department,
+.lt-ie8 .department-level,
+.lt-ie8 .department-level2
+{
+    width: 18.25%;
+}
+
+@media all and (max-width: 767px)
+{
+    .department,
+    .department-level,
+    .department-level2
+    {
+        float: none;
+
+        width: 100%;
+        margin-left: 0;
+    }
+    .department:before,
+    .department-level:before,
+    .department-level2:before
+    {
+        position: absolute;
+        z-index: 0;
+        top: -100px;
+        left: 0;
+
+        display: block;
+
+        width: 0;
+        height: 100px;
+        margin-left: -4px;
+
+        content: '';
+
+        border-left: 4px solid #000;
+    }
+    .department:nth-child(2):before,
+    .department-level:nth-child(2):before,
+    .department-level2:nth-child(2):before
+    {
+        display: none;
+    }
+}
+
+.department > a,
+.department-level > a,
+.department-level2 > a
+{
+    z-index: 1;
+
+    margin: 0 0 -26px -4px;
+}
+
+
+/*.department > a:hover
+{
+    height: 80px;
+}*/
+
+.department > ul.organigrama,
+.department-level > ul.organigrama,
+.department-level2 > ul.organigrama
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.department li,
+.department-level li,
+.department-level2 li
+{
+    height: 180px;
+    /*las lineas de los departamentos*/
+    padding-left: 25px;
+
+    border-bottom: 4px solid #000;
+}
+
+.department li a
+{
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    right: -1px;
+
+    width: 90%;
+    height: 160px;
+    /*la altura de los departamentos*/
+
+    vertical-align: middle;
+
+    background: #000;
+}
+
+.department-level li a
+{
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    right: -1px;
+
+    width: 90%;
+    height: 160px;
+    /*la altura de los departamentos*/
+
+    vertical-align: middle;
+
+    background: #000;
+}
+
+.department-level2 li a
+{
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    right: -1px;
+
+    width: 90%;
+    height: 160px;
+    /*la altura de los departamentos*/
+
+    vertical-align: middle;
+
+    background: #000;
+}
+
+@media all and (max-width: 767px)
+{
+    .department li,
+    .department-level li,
+    .department-level2 li
+    {
+        height: 140px;
+    }
+    .department li a,
+    .department-level li a,
+    .department-level2 li a
+    {
+        height: 120px;
+    }
+}
+
+@media all and (max-width: 900px)
+{
+    .department li,
+    .department-level li,
+    .department-level2 li
+    {
+        height: 200px;
+    }
+    .department li a,
+    .department-level li a,
+    .department-level2 li a
+    {
+        height: 180px;
+    }
+}
+
+
+/*.department li a:hover
+{
+    top: 39px;
+
+    width: 95%;
+    height: 80px;
+
+    background-image: none!important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+}*/
+
+
+/* Department/ section colors */
+
+.department.dep-a a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #f44336;
+}
+
+.department.dep-b a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #689f38;
+}
+
+.department-level.dep-c a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #ffae00;
+}
+
+.department-level.dep-d a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #2196f3;
+}
+
+.department-level.dep-e a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #ef6c00;
+}
+
+.department-level2.dep-f a
+{
+    padding-right: 10px;
+    padding-left: 10px;
+
+    background: #311b92;
+}
+
+.encargado
+{
+    height: 110px !important;
+}
+
+@media all and (max-width: 900px)
+{
+    .encargado
+    {
+        height: 140px !important;
+    }
+}
+
+.encargado-level
+{
+    height: 110px !important;
+    /*top: 20px;*/
+}
+
+@media all and (max-width: 900px)
+{
+    .encargado-level
+    {
+        top: 0;
+
+        height: 140px !important;
+    }
+}
+
+.encargado-level2
+{
+    height: 110px !important;
+    /*top: 20px;*/
+}
+
+@media all and (max-width: 900px)
+{
+    .encargado-level2
+    {
+        top: 0;
+
+        height: 140px !important;
+    }
+}
+
+
+/*
+.section-level
+{
+    top:20px;
+}*/
+
+@media all and (max-width: 900px)
+{
+    .section-level
+    {
+        top: 0;
+    }
+}

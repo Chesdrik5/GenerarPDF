@@ -1,0 +1,38 @@
+
+/*@media print
+{*/
+    /* Contenido del fichero print.css */
+
+    body
+    {
+        background-image: none;
+    }
+
+    header,
+    footer,
+    nav,
+    aside,
+    .search
+    {
+        display: none;
+    }
+
+    a:after
+    {
+        content: ' <' attr(href) '>';
+    }
+
+   /* ul,
+    img,
+    table
+    {
+        page-break-inside: avoid;
+    }*/
+
+    .table-responsive {
+    min-height: .01%;
+    overflow-x: initial;
+}
+
+
+/*}*/
